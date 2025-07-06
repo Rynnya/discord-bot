@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: discord-bot:latest
+    volumes:
+      - ./config.json:/app/config.json
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+    restart: no
+  lavalink:
+    image: fredboat/lavalink:dev
+    volumes:
+      - ./lavalink.yml:/application.yml
+    environment:
+      - LAVALINK_PORT=2333
+      - LAVALINK_ADDRESS=0.0.0.0
+      - LAVALINK_YA_MUSIC_TOKEN

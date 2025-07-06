@@ -1,0 +1,1 @@
+A simple music discord bot that was written in like one evening because I was asked to make one

@@ -1,0 +1,12 @@
+# Visual Studio generated stuff
+.vs/
+bin/
+obj/
+*.csproj.user
+*.pubxml.user
+
+# Lavalink artifacts
+Artifacts/
+
+# Credentials
+config.json
